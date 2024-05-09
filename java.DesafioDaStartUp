@@ -1,0 +1,53 @@
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Arrays;
+
+public class Main {
+  public static void main(String[] args) {
+    ArrayList<String> P1 = new ArrayList<String>();
+    ArrayList<String> P2 = new ArrayList<String>();
+    ArrayList<String> P3 = new ArrayList<String>();
+    ArrayList<String> P4 = new ArrayList<String>();
+
+    ArrayList<String> Array = new ArrayList<String>(Arrays.asList(
+      "As_de_Paus", "Dois_de_Paus", "Tres_de_Paus", "Quatro_de_Paus", "Cinco_de_Paus", "Seis_de_Paus", "Sete_de_Paus", "Oito_de_Paus", "Nove_de_Paus", "Dez_de_Paus", "Valete_de_Paus", "Dama_de_Paus", "Rei_de_Paus", "As_de_Copas", "Dois_de_Copas", "Tres_de_Copas", "Quatro_de_Copas", "Cinco_de_Copas", "Seis_de_Copas", "Sete_de_Copas", "Oito_de_Copas", "Nove_de_Copas", "Dez_de_Copas", "Valete_de_Copas", "Dama_de_Copas", "Rei_de_Copas", "As_de_Espadas", "Dois_de_Espadas", "Tres_de_Espadas", "Quatro_de_Espadas", "Cinco_de_Espadas", "Seis_de_Espadas", "Sete_de_Espadas", "Oito_de_Espadas", "Nove_de_Espadas", "Dez_de_Espadas", "Valete_de_Espadas", "Dama_de_Espadas", "Rei_de_Espadas", "As_de_Ouros", "Dois_de_Ouros", "Tres_de_Ouros", "Quatro_de_Ouros", "Cinco_de_Ouros", "Seis_de_Ouros", "Sete_de_Ouros", "Oito_de_Ouros", "Nove_de_Ouros", "Dez_de_Ouros", "Valete_de_Ouros", "Dama_de_Ouros", "Rei_de_Ouros"
+    ));
+    
+      for (int i = 0; i < 7; i++) {
+        Random random = new Random();
+        int num = random.nextInt(Array.size());
+        String carta = Array.get(num);
+        P1.add(carta);
+        Array.remove(carta);
+      }
+
+      for (int i = 0; i < 7; i++) {
+        Random random = new Random();
+        int num = random.nextInt(Array.size());
+        String carta = Array.get(num);
+        P2.add(carta);
+        Array.remove(carta);
+      }
+
+      for (int i = 0; i < 7; i++) {
+        Random random = new Random();
+        int num = random.nextInt(Array.size());
+        String carta = Array.get(num);
+        P3.add(carta);
+        Array.remove(carta);
+      }
+
+      for (int i = 0; i < 7; i++) {
+        Random random = new Random();
+        int num = random.nextInt(Array.size());
+        String carta = Array.get(num);
+        P4.add(carta);
+        Array.remove(carta);
+      }
+
+      System.out.println("Cartas do Jogador 1: " + P1);
+      System.out.println("\nCartas do Jogador 2: " + P2);
+      System.out.println("\nCartas do Jogador 3: " + P3);
+      System.out.println("\nCartas do Jogador 4: " + P4);
+  }
+}
